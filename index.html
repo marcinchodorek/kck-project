@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/css/styles.css">
+    <link rel="stylesheet" href="/styles/css/flickity.css" media="screen">
+    <link rel="icon" href="/icons/1.svg">
+    <title>Ski-Resort</title>
+    <script src="https://kit.fontawesome.com/8e71691b9c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="nav-alter">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-skiing"></i>
+                <span class="logo-text">ski-resort</span>
+            </a>
+            <ul class="nav-list">
+                <li class="list-item"><a href="#offer">Offer</a></li>
+                <li class="list-item"><a href="#gallery">Gallery</a></li>
+                <li class="list-item"><a href="#weather">Weather</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="/images/hero.jpeg" alt="">
+        <div class="hero-content">
+            <h1 class="hero-title">ski-resort</h1>
+            <h3 class="hero-subtitle">Lorem ipsum dolor sit amet</h3>
+        </div>
+    </section>
+
+    <section class="offer" id="offer">
+
+        <div class="bgrnd-stripe"></div>
+
+        <h2>What we offer</h2>
+        <div class="offer-cards">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-skating"></i>
+                    <h4 class="card-title">Ice-skating</h4>
+                </div>
+                <p class="card-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum asperiores tempore libero
+                    nesciunt placeat a enim facilis dolorem, temporibus, ipsum reprehenderit aperiam? Modi rem minus
+                    inventore aliquid recusandae nihil?
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-skating"></i>
+                    <h4 class="card-title">Nordic-skiing trails</h4>
+                </div>
+                <p class="card-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum asperiores tempore libero
+                    nesciunt placeat a enim facilis dolorem, temporibus, ipsum reprehenderit aperiam? Modi rem minus
+                    inventore aliquid recusandae nihil?
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-skating"></i>
+                    <h4 class="card-title">Best ski slopes</h4>
+                </div>
+                <p class="card-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum asperiores tempore libero
+                    nesciunt placeat a enim facilis dolorem, temporibus, ipsum reprehenderit aperiam? Modi rem minus
+                    inventore aliquid recusandae nihil?
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-snowboarding"></i>
+                    <h4 class="card-title">Snowboard lessons</h4>
+                </div>
+                <p class="card-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum asperiores tempore libero
+                    nesciunt placeat a enim facilis dolorem, temporibus, ipsum reprehenderit aperiam? Modi rem minus
+                    inventore aliquid recusandae nihil?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container js-flickity" data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell"><img src="/images/slide1.jpeg" alt=""></div>
+            <div class="gallery-cell"><img src="/images/slide2.jpeg" alt=""></div>
+            <div class="gallery-cell"><img src="/images/slide3.jpeg" alt=""></div>
+            <div class="gallery-cell"><img src="/images/slide4.jpeg" alt=""></div>
+        </div>
+    </section>
+
+
+    <section class="weather" id="weather">
+        <h2>Weather Conditions</h2>
+        <h3>Today</h3>
+        <div class="weather-container today"></div>
+        <h3>Tomorrow</h3>
+        <div class="weather-container tomorrow"></div>
+    </section>
+
+
+    <footer>ski-resort &copy;</footer>
+
+    <script src="config.js"></script>
+    <script src="/scripts/forecast.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/observers.js"></script>
+    <script src="/scripts/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
