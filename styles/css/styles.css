@@ -204,6 +204,9 @@ nav .nav-list .list-item:hover::after {
   .return-btn {
     display: block;
   }
+  .err .err-btn {
+    font-size: 0.8rem;
+  }
 }
 
 .offer {
@@ -341,6 +344,40 @@ nav .nav-list .list-item:hover::after {
           justify-content: center;
 }
 
+.weather-container .err, .today .err, .tomorrow .err {
+  width: 80%;
+  height: 70px;
+  margin-bottom: 100px;
+  background-color: #ff5257;
+  border: 4px solid #cf0006;
+  margin: auto;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.weather-container .err .err-content, .today .err .err-content, .tomorrow .err .err-content {
+  margin-right: 5px;
+}
+
+.weather-container .err .err-btn, .today .err .err-btn, .tomorrow .err .err-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .weather-container .weather-card, .today .weather-card, .tomorrow .weather-card {
   background-color: white;
   -webkit-box-shadow: 0px 0px 2px 0px #5a5a5a;
@@ -377,40 +414,6 @@ nav .nav-list .list-item:hover::after {
 
 .weather-container .weather-card .card-content div, .today .weather-card .card-content div, .tomorrow .weather-card .card-content div {
   margin-bottom: 10px;
-}
-
-.err {
-  width: 80%;
-  height: 70px;
-  margin: 100px 0 50px 0;
-  background-color: #ff5257;
-  border: 4px solid #cf0006;
-  margin: auto;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  position: relative;
-}
-
-.err .err-content {
-  margin-right: 5px;
-}
-
-.err .err-btn {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 footer {

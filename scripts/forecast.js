@@ -82,7 +82,6 @@ cities.forEach(city => {
         tomorrowCardContainer.innerHTML += `
             <div class="err">
                 <p class="err-content">Problem with displaying some of the data</p>
-                <i class="far fa-frown-open"></i>
                 <button class="err-btn" onclick="removeElement(this)"><i class="fas fa-times"></i></button>
             </div>
         `;
