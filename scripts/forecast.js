@@ -1,11 +1,11 @@
 const todayCardContainer = document.querySelector('.today');
 const tomorrowCardContainer = document.querySelector('.tomorrow');
 
-const cities = ['Kielce', 'Tokio'];
+const cities = ['Zakopane', 'Szczyrk', 'Kielce', 'Cracow'];
 
 const getCity = async (city) => {
     const requestEndpoint = "//dataservice.accuweather.com/locations/v1/cities/search";
-    const cityQuery = `?apikey=${api_key}&q=${city}&language=pl-pl&details=true`;
+    const cityQuery = `?apikey=${api_key}&q=${city}&details=true`;
     const response = await fetch(requestEndpoint + cityQuery);
     const cityData = await response.json();
 
@@ -77,7 +77,6 @@ const udpateCards = (data) => {
 
 cities.forEach(city => {
     getData(city).then(data => {
-        console.log(data);
         udpateCards(data);
     }).catch(() => {
         tomorrowCardContainer.innerHTML += `
