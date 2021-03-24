@@ -4,7 +4,7 @@ const tomorrowCardContainer = document.querySelector('.tomorrow');
 const cities = ['Kielce', 'Tokio'];
 
 const getCity = async (city) => {
-    const requestEndpoint = "http://dataservice.accuweather.com/locations/v1/cities/search";
+    const requestEndpoint = "//dataservice.accuweather.com/locations/v1/cities/search";
     const cityQuery = `?apikey=${api_key}&q=${city}&language=pl-pl&details=true`;
     const response = await fetch(requestEndpoint + cityQuery);
     const cityData = await response.json();
@@ -14,7 +14,7 @@ const getCity = async (city) => {
 };
 
 const getWeather = async (city) => {
-    const requestEndpoint = `http://dataservice.accuweather.com/currentconditions/v1/${city}`;
+    const requestEndpoint = `//dataservice.accuweather.com/currentconditions/v1/${city}`;
     const weatherQuery = `?apikey=${api_key}&details=true`;
     const response = await fetch(requestEndpoint + weatherQuery);
     const weatherData = await response.json();
@@ -23,7 +23,7 @@ const getWeather = async (city) => {
 };
 
 const getForecast = async (city) => {
-    const requestEndpoint = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${city}`;
+    const requestEndpoint = `//dataservice.accuweather.com/forecasts/v1/daily/1day/${city}`;
     const forecastQuery = `?apikey=${api_key}&metric=true&details=true`;
     const response = await fetch(requestEndpoint + forecastQuery);
     const forecastData = await response.json();
