@@ -159,6 +159,53 @@ nav .nav-list .list-item:hover::after {
   font-weight: 300;
 }
 
+.return-btn {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  color: white;
+  z-index: 20;
+  background-color: #243046;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav-logo {
+    display: none;
+  }
+  nav .nav-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero img {
+    height: 80vh;
+    width: auto;
+  }
+  .hero .hero-content .hero-title {
+    font-size: 2rem;
+  }
+  .hero .hero-content .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .return-btn {
+    display: block;
+  }
+}
+
 .offer {
   width: 50%;
   margin: auto;

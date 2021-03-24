@@ -72,6 +72,7 @@ nav {
         text-decoration: none;
         color: white;
         align-items: center;
+
         & i {
             font-size: 3rem;
             margin-right: 20px;
@@ -151,6 +152,50 @@ nav {
     }
 }
 
+.return-btn {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    color: white;
+    z-index: 20;
+    background-color: $primary-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    nav .nav-logo {
+        display: none;
+    }
+
+    nav .nav-container {
+        justify-content: center;
+    }
+
+    .hero img {
+        height: 80vh;
+        width: auto;
+    }
+
+    .hero .hero-content .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero .hero-content .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .return-btn {
+        display: block;
+    }
+}
+
 // Offer section
 
 .offer {
@@ -209,18 +254,6 @@ nav {
     }
 
 }
-
-// .bgrnd-stripe {
-//     width: 100%;
-//     height: 100%;
-//     background-color: $primary-color;
-//     background-clip: border-box;
-//     position: absolute;
-//     left: -50%;
-//     top: -20%;
-//     z-index: -1;
-//     transform: rotate(45deg);
-// }
 
 // Gallery slideshow
 
