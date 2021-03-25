@@ -152,6 +152,8 @@ nav {
     }
 }
 
+// Return Btn
+
 .return-btn {
     position: fixed;
     bottom: 50px;
@@ -159,8 +161,9 @@ nav {
     color: white;
     z-index: 20;
     background-color: $primary-color;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    opacity: .85;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -169,42 +172,11 @@ nav {
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    nav .nav-logo {
-        display: none;
-    }
-
-    nav .nav-container {
-        justify-content: center;
-    }
-
-    .hero img {
-        height: 80vh;
-        width: auto;
-    }
-
-    .hero .hero-content .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero .hero-content .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .return-btn {
-        display: block;
-    }
-
-    .err .err-btn {
-        font-size: 0.8rem;
-    }
-}
-
 // Offer section
 
 .offer {
-    width: 50%;
-    margin: auto;
+    width: 80%;
+    margin: 0 auto 200px auto;
 
     & .offer-cards {
         display: flex;
@@ -213,12 +185,12 @@ nav {
         flex-wrap: wrap;
 
         & .card {
-            max-width: 250px;
+            max-width: 350px;
             min-width: 200px;
             border-radius: 5px;
             padding: 10px;
             margin: 50px;
-            background-color: white;
+            background-color: transparent;
             position: relative;
             box-shadow: 0 0 2px 0 #5a5a5a;
             transition: transform 0.3s ease;
@@ -238,7 +210,11 @@ nav {
             }
 
             &::after {
-                content: '';
+                content: 'Pricing 5$ / hour';
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -247,6 +223,7 @@ nav {
                 left: 0px;
                 opacity: 0;
                 box-shadow: 0 5px 10px 0 #5a5a5a;
+                background-color: $primary-color;
                 transition: opacity .3s ease;
             }
 
@@ -304,6 +281,21 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+
+    & .rectangle {
+        width: 400px;
+        height: 400px;
+        background-color: $primary-color;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -400px;
+        left: -200px;
+        z-index: -2;
+        filter: blur(10px);
+        opacity: 0.8;
+    }
+
 
     .err {
         width: 80%;
@@ -311,17 +303,13 @@ nav {
         margin-bottom: 100px;
         background-color: #ff5257;
         border: 4px solid #cf0006;
-        margin: auto;
+        margin: 10px auto 10px auto;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         position: relative;
-
-        & .err-content {
-            margin-right: 5px;
-        }
 
         & .err-btn {
             background: none;
@@ -342,7 +330,26 @@ nav {
         border-radius: 5px;
         margin: 20px;
         position: relative;
+        overflow: hidden;
 
+
+        & .good {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: green;
+            color: white;
+        }
+
+        & .bad {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: #ff5257;
+            color: white;
+        }
 
         & .time {
             border-radius: 5px;
@@ -354,10 +361,10 @@ nav {
             position: absolute;
             background-color: white;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            top: 28%;
-            left: 37%;
+            width: 130px;
+            height: 130px;
+            top: -4%;
+            left: -6%;
             z-index: 2;
         }
 
@@ -372,7 +379,64 @@ nav {
     }
 }
 
+// Comments section
 
+.comments {
+
+    & .comment-card {
+        background-color: rgba($color: #eee, $alpha: 0.6);
+        width: 70%;
+        max-width: 700px;
+        margin: 50px auto 50px auto;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            width: 120%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            background-color: lightseagreen;
+            z-index: -1;
+            transform: rotate(45deg);
+            transition: transform .5s ease;
+        }
+
+        &:hover::after {
+            transform: rotate(720deg);
+        }
+
+        & .comment-user {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            // background-color: #5a5a5a;
+            border-radius: 5px 5px 0 0 ;
+
+            & img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            & div {
+                font-size: 1.2rem
+            }
+        }
+
+        & .comment-content {
+            padding: 20px;
+            & h3 {
+                margin-top: 0;
+            }
+        }
+    }
+}
 
 
 footer {
@@ -384,4 +448,46 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+}
+
+// Media queries
+
+@media screen and (max-width:768px) {
+    nav .nav-logo {
+        display: none;
+    }
+
+    nav .nav-container {
+        justify-content: center;
+    }
+
+    .hero img {
+        height: 80vh;
+        width: auto;
+    }
+
+    .hero .hero-content .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero .hero-content .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .return-btn {
+        display: block;
+    }
+
+    .err .err-btn {
+        font-size: 0.8rem;
+    }
+
+    .gallery-container {
+        background-color: white;
+
+        & .gallery-cell {
+            width: 90%;
+            height: 300px;
+        }
+    }
 }

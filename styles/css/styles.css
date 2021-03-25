@@ -166,8 +166,9 @@ nav .nav-list .list-item:hover::after {
   color: white;
   z-index: 20;
   background-color: #243046;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  opacity: .85;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,36 +183,9 @@ nav .nav-list .list-item:hover::after {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  nav .nav-logo {
-    display: none;
-  }
-  nav .nav-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .hero img {
-    height: 80vh;
-    width: auto;
-  }
-  .hero .hero-content .hero-title {
-    font-size: 2rem;
-  }
-  .hero .hero-content .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  .return-btn {
-    display: block;
-  }
-  .err .err-btn {
-    font-size: 0.8rem;
-  }
-}
-
 .offer {
-  width: 50%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto 200px auto;
 }
 
 .offer .offer-cards {
@@ -229,12 +203,12 @@ nav .nav-list .list-item:hover::after {
 }
 
 .offer .offer-cards .card {
-  max-width: 250px;
+  max-width: 350px;
   min-width: 200px;
   border-radius: 5px;
   padding: 10px;
   margin: 50px;
-  background-color: white;
+  background-color: transparent;
   position: relative;
   -webkit-box-shadow: 0 0 2px 0 #5a5a5a;
           box-shadow: 0 0 2px 0 #5a5a5a;
@@ -265,7 +239,17 @@ nav .nav-list .list-item:hover::after {
 }
 
 .offer .offer-cards .card::after {
-  content: '';
+  content: 'Pricing 5$ / hour';
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -275,6 +259,7 @@ nav .nav-list .list-item:hover::after {
   opacity: 0;
   -webkit-box-shadow: 0 5px 10px 0 #5a5a5a;
           box-shadow: 0 5px 10px 0 #5a5a5a;
+  background-color: #243046;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
@@ -342,6 +327,22 @@ nav .nav-list .list-item:hover::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.weather-container .rectangle, .today .rectangle, .tomorrow .rectangle {
+  width: 400px;
+  height: 400px;
+  background-color: #243046;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -400px;
+  left: -200px;
+  z-index: -2;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: 0.8;
 }
 
 .weather-container .err, .today .err, .tomorrow .err {
@@ -350,7 +351,7 @@ nav .nav-list .list-item:hover::after {
   margin-bottom: 100px;
   background-color: #ff5257;
   border: 4px solid #cf0006;
-  margin: auto;
+  margin: 10px auto 10px auto;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,10 +364,6 @@ nav .nav-list .list-item:hover::after {
           justify-content: center;
   color: white;
   position: relative;
-}
-
-.weather-container .err .err-content, .today .err .err-content, .tomorrow .err .err-content {
-  margin-right: 5px;
 }
 
 .weather-container .err .err-btn, .today .err .err-btn, .tomorrow .err .err-btn {
@@ -388,6 +385,37 @@ nav .nav-list .list-item:hover::after {
   border-radius: 5px;
   margin: 20px;
   position: relative;
+  overflow: hidden;
+}
+
+.weather-container .weather-card .good, .today .weather-card .good, .tomorrow .weather-card .good {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  background-color: green;
+  color: white;
+}
+
+.weather-container .weather-card .bad, .today .weather-card .bad, .tomorrow .weather-card .bad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  background-color: #ff5257;
+  color: white;
 }
 
 .weather-container .weather-card .time, .today .weather-card .time, .tomorrow .weather-card .time {
@@ -400,10 +428,10 @@ nav .nav-list .list-item:hover::after {
   position: absolute;
   background-color: white;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  top: 28%;
-  left: 37%;
+  width: 130px;
+  height: 130px;
+  top: -4%;
+  left: -6%;
   z-index: 2;
 }
 
@@ -414,6 +442,69 @@ nav .nav-list .list-item:hover::after {
 
 .weather-container .weather-card .card-content div, .today .weather-card .card-content div, .tomorrow .weather-card .card-content div {
   margin-bottom: 10px;
+}
+
+.comments .comment-card {
+  background-color: rgba(238, 238, 238, 0.6);
+  width: 70%;
+  max-width: 700px;
+  margin: 50px auto 50px auto;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.comments .comment-card::after {
+  content: '';
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.comments .comment-card:hover::after {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
+.comments .comment-card .comment-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.comments .comment-card .comment-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.comments .comment-card .comment-user div {
+  font-size: 1.2rem;
+}
+
+.comments .comment-card .comment-content {
+  padding: 20px;
+}
+
+.comments .comment-card .comment-content h3 {
+  margin-top: 0;
 }
 
 footer {
@@ -431,5 +522,39 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav-logo {
+    display: none;
+  }
+  nav .nav-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero img {
+    height: 80vh;
+    width: auto;
+  }
+  .hero .hero-content .hero-title {
+    font-size: 2rem;
+  }
+  .hero .hero-content .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .return-btn {
+    display: block;
+  }
+  .err .err-btn {
+    font-size: 0.8rem;
+  }
+  .gallery-container {
+    background-color: white;
+  }
+  .gallery-container .gallery-cell {
+    width: 90%;
+    height: 300px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
