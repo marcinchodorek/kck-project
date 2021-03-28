@@ -71,6 +71,47 @@
     <script src="/scripts/flickity.pkgd.min.js"></script>
     <script>
         finButton.disabled = true;
+        orderButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cartSummary = document.querySelector('.summary-wrapper');
+            cartSummary.classList.remove('removed');
+        });
+
+        closeButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cartSummary = document.querySelector('.summary-wrapper');
+            cartSummary.classList.add('removed');
+
+        });
+        finButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const orderMessage = document.querySelector('.summary-content');
+            cartList = [];
+            localStorage.setItem('list', JSON.stringify(cartList));
+            orderMessage.innerHTML = `
+            Order was successful
+            </br></br>
+            You will be redirected...
+            `;
+            setTimeout(() => {
+                window.location.href = '/offer/';
+            }, 2000);
+
+        });
+
+        emailInput.addEventListener('keyup', (e) => {
+            if (validateEmail(e.target.value.trim())) {
+                finButton.classList.remove('inactive');
+                finButton.disabled = false;
+                emailInput.classList.remove('invalid');
+                emailInput.classList.add('valid');
+            } else {
+                emailInput.classList.remove('valid');
+                emailInput.classList.add('invalid');
+                finButton.disabled = true;
+                finButton.classList.add('inactive');
+            }
+        });
     </script>
 </body>
 

@@ -6,6 +6,7 @@ const orderButton = document.querySelector('.order-btn');
 const closeButton = document.querySelector('.close-btn');
 const finButton = document.querySelector('.fin-btn');
 const emailInput = document.querySelector('.order-form input[type="email"]');
+const cartItems = document.querySelector('.cart-items');
 let cartList = JSON.parse(localStorage.getItem('list')) || [];
 
 const removeElement = (element) => {
@@ -28,15 +29,17 @@ const addToCart = (event) => {
         img: product.getElementsByClassName('pimg')[0].src,
         quantity: 1
     };
-
-    cartList.length === 0 ? cartList.push(cartProduct) :
-        cartList.some(element => element.name === cartProduct.name) ?
-            cartList.forEach(element => {
-                if (element.name === cartProduct.name) element.quantity += 1;
-            }) : cartList.push(cartProduct);
+    if (cartList.length === 0) {
+        cartList.push(cartProduct);
+    } else if (cartList.some(element => element.name === cartProduct.name)) {
+        cartList.forEach(element => {
+            if (element.name === cartProduct.name) element.quantity += 1;
+        })
+    } else {
+        cartList.push(cartProduct)
+    }
 
     localStorage.setItem('list', JSON.stringify(cartList));
-    console.log(cartList);
 }
 
 const buttonsMessage = () => {
@@ -74,51 +77,9 @@ const getProductDetails = () => {
 };
 
 
-orderButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const cartSummary = document.querySelector('.summary-wrapper');
-    cartSummary.classList.remove('removed');
-});
-
-closeButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const cartSummary = document.querySelector('.summary-wrapper');
-    cartSummary.classList.add('removed');
-
-});
 
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-
-finButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const orderMessage = document.querySelector('.summary-content');
-    cartList = [];
-    localStorage.setItem('list', JSON.stringify(cartList));
-    orderMessage.innerHTML = `
-    Order was successful
-    </br></br>
-    You will be redirected...
-    `;
-    setTimeout(() => {
-        window.location.href = '/offer/';
-    }, 2000);
-
-});
-
-emailInput.addEventListener('keyup', (e) => {
-    if (validateEmail(e.target.value.trim())) {
-        finButton.classList.remove('inactive');
-        finButton.disabled = false;
-        emailInput.classList.remove('invalid');
-        emailInput.classList.add('valid');
-    } else {
-        emailInput.classList.remove('valid');
-        emailInput.classList.add('invalid');
-        finButton.disabled = true;
-        finButton.classList.add('inactive');
-    }
-});
 

@@ -77,6 +77,7 @@ function addItemsToCart() {
         `;
         total += element.price * element.quantity;
     });
+
     totalValue.textContent = `${total}zł`;
     deleteElement();
     changeQuantity();

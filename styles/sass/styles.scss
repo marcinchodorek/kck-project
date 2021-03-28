@@ -90,6 +90,27 @@ nav {
     & .nav-list {
         list-style: none;
         display: flex;
+        position: relative;
+
+        & .cart-items {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            border-radius: 50%;
+            background-color: white;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 0.8rem;
+
+            &.removed {
+                display: none;
+            }
+        }
 
         & .list-item {
             font-size: 1.2rem;
