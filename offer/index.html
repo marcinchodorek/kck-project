@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/css/styles.css">
+    <link rel="stylesheet" href="/styles/css/flickity.css" media="screen">
+    <link rel="icon" href="/icons/1.svg">
+    <title>Offer</title>
+    <script src="https://kit.fontawesome.com/8e71691b9c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="nav-logo">
+                <i class="fas fa-skiing"></i>
+                <span class="logo-text">ski-resort</span>
+            </a>
+            <ul class="nav-list">
+                <li class="list-item"><a href="/cart/"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button class="return-btn" onclick="goToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <section class="items-container">
+        <div class="options-wrapper">
+            <form class="options-form">
+                <label for="searchbar"><i class="fas fa-search"></i></label>
+                <input type="text" name="searchbar" class="search-bar" placeholder="Search">
+                <label for="sort">Sort</label>
+                <select name="sort">
+                    <option value="" selected disabled hidden></option>
+                    <option value="highest">Highest price</option>
+                    <option value="lowest">Lowest price</option>
+                    <option value="asc">A-Z</option>
+                    <option value="dsc">Z-A</option>
+                </select>
+                <button>Filter</button>
+            </form>
+        </div>
+
+        <div class="added-info">Product added to cart</div>
+        <div class="items-wrapper">
+        </div>
+
+    </section>
+
+
+
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/cart.js"></script>
+    <script src="/scripts/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
