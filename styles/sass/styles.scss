@@ -234,7 +234,7 @@ nav {
             }
 
             &::after {
-                content: 'Pricing 5$ / hour';
+                content: '';
                 color: white;
                 display: flex;
                 justify-content: center;
@@ -247,7 +247,6 @@ nav {
                 left: 0px;
                 opacity: 0;
                 box-shadow: 0 5px 10px 0 #5a5a5a;
-                background-color: $primary-color;
                 transition: opacity .3s ease;
             }
 
@@ -508,6 +507,13 @@ footer {
 
     nav .nav-container {
         justify-content: center;
+
+        .list-item {
+            font-size: 1rem;
+            & i {
+                font-size: 1.6rem;
+            }
+        }
     }
 
     .hero img {
@@ -550,7 +556,6 @@ footer {
 
 .items-container {
     width: 100%;
-    min-height: 81.3vh;
     margin-top: 200px;
 
     & .added-info,
@@ -833,7 +838,7 @@ footer {
 .cart-message {
     width: 70%;
     height: 100px;
-    margin: -400px auto 0 auto;
+    margin: -300px auto 0 auto;
     border-radius: 5px;
     background-color: #04a3db;
     color: white;
@@ -973,3 +978,175 @@ footer {
     }
 }
 
+@media (max-width:768px) {
+    .items-container {
+
+        & .options-wrapper {
+            height: auto;
+        }
+
+        & .options-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & i {
+                margin-top: 10px;
+            }
+
+            & input, label, button, select {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        & .items-wrapper {
+
+            & .product-item {
+                height: 120px;
+                width: 70%;
+
+                &.product-expanded {
+                    width: 80%;
+                    & .item-info {
+                        position: relative;
+
+                        & img {
+                            position: absolute;
+                            display: block;
+                            bottom: 0;
+                            left: 0;
+                            width: 120px;
+                            height: 120px;
+                        }
+
+                        & .pname {
+                            position: absolute;
+                            left: 5px;
+                            top: 35%;
+                            font-size: 1rem;
+                        }
+
+                        & button {
+                            position: absolute;
+                            left: 0;
+                        }
+
+                        & span {
+                            top: 12px;
+                            left: 450px;
+                            font-size: .8rem;
+                        }
+                    }
+
+                    & .item-content {
+                        position: relative;
+
+                        & div:nth-last-of-type(1) {
+                            position: absolute;
+                            top: 35%;
+                            right: -10%;
+                            font-size: .9rem;
+
+                            &::before{
+                                content: "price:";
+                            }
+                        }
+
+                        & .show-info {
+                            position: absolute;
+                            right:0;
+                            top: 50%;
+                        }
+
+                        & div {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .item-info {
+                position: relative;
+                border-radius: 5px;
+
+                & button {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 5px;
+                }
+
+                & span {
+                    position: absolute;
+                    font-size: .9rem;
+                    top: 10px;
+                    left: 20%;
+                }
+
+
+                & img {
+                    display: none;
+                }
+            }
+
+            .item-content {
+                position: relative;
+
+                & div:nth-last-of-type(1) {
+                    position: absolute;
+                    top: 50px;
+                    right: 0;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    .cart-wrapper {
+
+       & .product-item {
+            width: 90% !important;
+
+            & .item-info {
+                position: relative;
+
+                & .pname {
+                    position: absolute;
+                    top: 5px;
+                    left: 120%;
+                }
+            }
+
+            & .item-content {
+                position: relative;
+
+                & div {
+                    position: absolute;
+                    left: 15%;
+                    top: 40%;
+                }
+            }
+       }
+    }
+
+    .summary-content {
+        top: -200px !important;
+        height: 400px !important;
+
+        & form {
+            padding: 20px !important;
+            margin: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        input[type="email"] {
+            width: 95% !important;
+        }
+    }
+
+    .removed-info {
+        font-size: .9rem;
+    }
+}
