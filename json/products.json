@@ -33,5 +33,40 @@
         "price": "70",
         "info": "et ea vero quia laudantium autem",
         "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+    },
+    {
+        "id": 6,
+        "name": "Item 6",
+        "price": "70",
+        "info": "et ea vero quia laudantium autem",
+        "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+    },
+    {
+        "id": 7,
+        "name": "Item 7",
+        "price": "20",
+        "info": "et ea vero quia laudantium autem",
+        "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+    },
+    {
+        "id": 8,
+        "name": "Item 8",
+        "price": "70",
+        "info": "et ea vero quia laudantium autem",
+        "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+    },
+    {
+        "id": 9,
+        "name": "Item 9",
+        "price": "90",
+        "info": "et ea vero quia laudantium autem",
+        "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+    },
+    {
+        "id": 10,
+        "name": "Item 10",
+        "price": "45",
+        "info": "et ea vero quia laudantium autem",
+        "picture": "https://images.unsplash.com/photo-1614560028624-77d3b8a12829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
     }
 ]
