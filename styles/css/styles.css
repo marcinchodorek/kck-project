@@ -88,7 +88,7 @@ nav .nav-logo {
 }
 
 nav .nav-logo i {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-right: 20px;
 }
 
@@ -139,6 +139,10 @@ nav .nav-list .list-item {
 nav .nav-list .list-item a {
   text-decoration: none;
   color: white;
+}
+
+nav .nav-list .list-item a i {
+  font-size: 1.5rem;
 }
 
 nav .nav-list .list-item::after {
@@ -380,7 +384,52 @@ nav .nav-list .list-item:hover::after {
   margin-top: 200px;
 }
 
+.weather .custom-forecast {
+  text-align: center;
+}
+
+.weather .custom-forecast label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.weather .custom-forecast button {
+  border: none;
+  background-color: #12b886;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.weather .custom-forecast button:hover {
+  background-color: #eee;
+  color: #12b886;
+}
+
+.weather .custom-forecast input {
+  border: 1px solid #e2e2e2;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 5px;
+  margin: 10px 0 20px 0;
+}
+
+.weather .custom-forecast input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px rgba(41, 198, 255, 0.8);
+          box-shadow: 0 0 0 3px rgba(41, 198, 255, 0.8);
+}
+
 .weather-container,
+.custom-container,
 .today,
 .tomorrow {
   display: -webkit-box;
@@ -395,6 +444,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .rectangle,
+.custom-container .rectangle,
 .today .rectangle,
 .tomorrow .rectangle {
   width: 400px;
@@ -412,6 +462,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .err,
+.custom-container .err,
 .today .err,
 .tomorrow .err {
   width: 80%;
@@ -435,6 +486,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .err .err-btn,
+.custom-container .err .err-btn,
 .today .err .err-btn,
 .tomorrow .err .err-btn {
   background: none;
@@ -446,6 +498,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card,
+.custom-container .weather-card,
 .today .weather-card,
 .tomorrow .weather-card {
   background-color: white;
@@ -461,6 +514,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .good,
+.custom-container .weather-card .good,
 .today .weather-card .good,
 .tomorrow .weather-card .good {
   display: -webkit-box;
@@ -478,6 +532,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .bad,
+.custom-container .weather-card .bad,
 .today .weather-card .bad,
 .tomorrow .weather-card .bad {
   display: -webkit-box;
@@ -495,6 +550,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .time,
+.custom-container .weather-card .time,
 .today .weather-card .time,
 .tomorrow .weather-card .time {
   border-radius: 5px;
@@ -503,6 +559,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .icon,
+.custom-container .weather-card .icon,
 .today .weather-card .icon,
 .tomorrow .weather-card .icon {
   position: absolute;
@@ -516,6 +573,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .card-content,
+.custom-container .weather-card .card-content,
 .today .weather-card .card-content,
 .tomorrow .weather-card .card-content {
   text-align: center;
@@ -523,6 +581,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .weather-container .weather-card .card-content div,
+.custom-container .weather-card .card-content div,
 .today .weather-card .card-content div,
 .tomorrow .weather-card .card-content div {
   margin-bottom: 10px;
@@ -716,7 +775,7 @@ footer {
 }
 
 .items-container .options-wrapper {
-  background-color: #e2e2e2;
+  background-color: #f5f5f5;
   border-radius: 5px;
   width: 80%;
   margin: auto;
@@ -1020,7 +1079,7 @@ footer {
   height: 100px;
   margin: -300px auto 0 auto;
   border-radius: 5px;
-  background-color: #04a3db;
+  background-color: #707070;
   color: white;
   font-size: 1.2rem;
   display: -webkit-box;
@@ -1058,7 +1117,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-top: 1px solid black;
-  margin: 15vh auto 10vh auto;
+  margin: 5vh auto 10vh auto;
   padding: 20px;
 }
 

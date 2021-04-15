@@ -78,7 +78,7 @@ nav {
     align-items: center;
 
     & i {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-right: 20px;
     }
 
@@ -119,6 +119,10 @@ nav {
       & a {
         text-decoration: none;
         color: white;
+
+        & i {
+          font-size: 1.5rem;
+        }
       }
 
       &::after {
@@ -317,9 +321,51 @@ nav {
 // Weather section
 .weather {
   margin-top: 200px;
+
+  & .custom-forecast {
+    text-align: center;
+
+    & label {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    & button {
+      border: none;
+      background-color: #12b886;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #eee;
+        color: #12b886;
+      }
+    }
+
+    & input {
+      border: 1px solid #e2e2e2;
+      width: 200px;
+      height: 30px;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.3s ease;
+      padding: 5px;
+      margin: 10px 0 20px 0;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(41, 198, 255, 0.8);
+      }
+    }
+  }
 }
 
 .weather-container,
+.custom-container,
 .today,
 .tomorrow {
   display: flex;
@@ -588,7 +634,7 @@ footer {
   }
 
   & .options-wrapper {
-    background-color: #e2e2e2;
+    background-color: #f5f5f5;
     border-radius: 5px;
     width: 80%;
     margin: auto;
@@ -834,7 +880,7 @@ footer {
   height: 100px;
   margin: -300px auto 0 auto;
   border-radius: 5px;
-  background-color: #04a3db;
+  background-color: #707070;
   color: white;
   font-size: 1.2rem;
   display: flex;
@@ -859,7 +905,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   border-top: 1px solid black;
-  margin: 15vh auto 10vh auto;
+  margin: 5vh auto 10vh auto;
   padding: 20px;
 
   & .order-btn {
