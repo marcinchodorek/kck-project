@@ -26,6 +26,7 @@ h3 {
 h2 {
   font-size: 1.7rem;
   text-align: center;
+  margin-top: 15%;
 }
 
 h3 {
@@ -202,7 +203,7 @@ nav {
 
 .offer {
   width: 80%;
-  margin: 0 auto 200px auto;
+  margin: auto;
 
   & .offer-cards {
     display: flex;
@@ -285,7 +286,7 @@ nav {
 // Gallery slideshow
 
 .gallery {
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 .gallery-container {
@@ -711,7 +712,7 @@ footer {
       transition: all 0.5s ease;
 
       &.product-expanded {
-        width: 80%;
+        // width: 80%;
         height: 400px;
 
         & .item-info {
@@ -722,20 +723,20 @@ footer {
             position: absolute;
             top: 0;
             left: 0;
-            width: 400px;
-            height: 400px;
+            width: 200px;
+            height: 200px;
           }
 
           & span,
           button {
             position: absolute;
             top: 10px;
-            left: 420px;
+            left: 220px;
           }
 
           & span {
             top: 12px;
-            left: 450px;
+            left: 250px;
             font-size: 1.2rem;
           }
         }

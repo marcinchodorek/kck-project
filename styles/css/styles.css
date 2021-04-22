@@ -25,6 +25,7 @@ h3 {
 h2 {
   font-size: 1.7rem;
   text-align: center;
+  margin-top: 15%;
 }
 
 h3 {
@@ -222,7 +223,7 @@ nav .nav-list .list-item:hover::after {
 
 .offer {
   width: 80%;
-  margin: 0 auto 200px auto;
+  margin: auto;
 }
 
 .offer .offer-cards {
@@ -335,7 +336,7 @@ nav .nav-list .list-item:hover::after {
 }
 
 .gallery {
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 .gallery-container {
@@ -871,7 +872,6 @@ footer {
 
 .items-container .items-wrapper .product-item.product-expanded,
 .items-container .cart-wrapper .product-item.product-expanded {
-  width: 80%;
   height: 400px;
 }
 
@@ -888,8 +888,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
 }
 
 .items-container .items-wrapper .product-item.product-expanded .item-info span,
@@ -898,13 +898,13 @@ footer {
 .items-container .cart-wrapper .product-item.product-expanded .item-info button {
   position: absolute;
   top: 10px;
-  left: 420px;
+  left: 220px;
 }
 
 .items-container .items-wrapper .product-item.product-expanded .item-info span,
 .items-container .cart-wrapper .product-item.product-expanded .item-info span {
   top: 12px;
-  left: 450px;
+  left: 250px;
   font-size: 1.2rem;
 }
 
